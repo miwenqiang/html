@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html布局，一侧定宽，一侧自适应</title>
+	<style>
+		float方法
+		.box{
+			width:100%;
+		}
+		.left{
+			width:200px;
+			float:left;
+			background-color:teal;
+		}
+		.right{
+			margin-left:200px;
+			background-color:blue;
+		}
+		position方法
+		.box{
+			width:100%;
+			position:relative;
+		}
+		.left{
+			position:absolute;
+			left:0;
+			top:0;
+			width:200px;
+			background-color:teal;
+		}
+		.right{
+			margin-left:200px;
+			background-color:blue;
+		}
+		flex方法
+		.box{
+			display:flex;
+			width:100%;
+		}
+		.left{
+			width:200px;
+			flex:none;
+			background-color:teal;
+		}
+		.right{
+			background-color:blue;
+			flex-grow:1;
+		}
+		table-cell方法
+		.box{
+			display:table;
+			width:100%;
+		}
+		.left{
+			display:table-cell;
+			width:200px;
+			background-color:teal;
+		}
+		.right{
+			display:table-cell;
+			background-color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="left">左边定宽为200px</div>
+		<div class="right">右边为自适应</div>
+	</div>
+</body>
+</html>
